@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'optimedica_frontend_app';
+  title = 'Bienvenido a la pagina Optimedica';
+  autor: string ='Jaime ttito';
+  empresa: string ='Optimedica SA';
 }

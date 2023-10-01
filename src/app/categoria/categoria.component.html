@@ -1,0 +1,37 @@
+<div class="card text-bg-primary mb-3">
+    <div class="card-header">Categorias</div>
+    <div class="card-body">
+        <h5 class="card-title">Lista de Categoria</h5>
+
+        <div class="my-2 text-left">
+            <button class="btn btn-secondary" type="button" [routerLink]="['/categorias/form']">Crear Categoria</button>
+        </div>
+        <div *ngIf="categorias?.length == 0" class="alert alert-info">
+            No hay registros en la base de datos!
+        </div>
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CATEGORIA</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let categoria of categorias">
+                    <td>{{categoria.id_categoria}}</td>
+                    <td>{{categoria.nombre}}</td>
+                    <td>
+                        <button type="button" name="editar" [routerLink]="['/categorias/form', categoria.id_categoria]" class="btn btn-primary">editar</button>
+                    </td>
+                    <td>
+                        <button type="button" name="eliminar" (click)="delete(categoria)" class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
