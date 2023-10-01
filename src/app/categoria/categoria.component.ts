@@ -7,7 +7,7 @@ import { CategoriaService } from './categoria.service';
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
-  
+
 })
 export class CategoriaComponent implements OnInit {
 
@@ -33,7 +33,7 @@ export class CategoriaComponent implements OnInit {
       },
       buttonsStyling: false
     })
-    
+
     swalWithBootstrapButtons.fire({
       title: 'Estas Seguro?',
       text: `¿Seguro que desea aliminar la categoria ${categoria.nombre}?`,
