@@ -14,6 +14,7 @@ import { FormComponent } from './categoria/form.component';
 import { MarcaComponent } from './marca/marca.component';
 
 
+
 const routes: Routes = [
   {path: '', redirectTo: '/categorias', pathMatch: 'full'},
   {path: 'marcas', component: MarcaComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
     MarcaComponent,
     CategoriaComponent,
     FormComponent
+    
   ],
   imports: [
     BrowserModule,

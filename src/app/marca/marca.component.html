@@ -1,11 +1,20 @@
-<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">{{habilitar==true? 'Ocultar': 'Mostrar'}}</button>
-<div class="card">
-    <div class="card-header">
-        Listado de marcas
-    </div>
-    <ul class="list-group" *ngIf="habilitar == true">
-        <li class="list-group-item" *ngFor="let marca of listaMarca">
-            {{marca}}
-        </li>
-    </ul>
-</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div *ngFor="let imageUrl of images" class="img-thumbnail rounded col-sm" style="width:64px; cursor: pointer;">
+                    <img [src]="imageUrl" alt="Imagen">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
